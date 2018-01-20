@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+    min-height: 600px;
+    width: 100%;
+    min-width: 1000px;
+    font-size: 1em;
+}
+
+body {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgb(221, 221, 221);
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    text-align: center;
+    height: 90px;
+    background: rgb(139, 137, 137);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 3em;
+    height: calc(100% - 20px);
+    font-weight: bold;
+    color: rgb(255, 243, 230);
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#navigation {
+    width: 200px;
+    float: left;
+    height: calc(100% - 90px);
+    margin: 0;
+    padding: 0 20px;
+    background: rgb(119, 83, 162);
+}
+
+#navigation a {
+    text-decoration: none;
+    color: rgba(229, 207, 255, 0.85);
+}
+
+#navigation ul {
+    color: rgba(229, 207, 255, 0.85);
+    list-style: none;
+}
+
+#navigation li {
+    margin-top: 2em;
+}
+
+#main {
+    height: calc(100% - 90px);
+    width: calc(100% - 240px);
+    background: rgba(20, 65, 88, 0.66);
+    float: left;
+}
+
+#background {
+    padding: 0;
+    height: 100%;
+    background: url(logo.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: -1;    
+}
+
+
+form {
+    padding: 100px;
+    width: calc(100% - 440px);
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+}
+
+input {
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: solid rgba(0,0,0,0);
+    margin: 10px 5px;
+}
+
+h2 {
+    position: absolute;
+    width: inherit;
+    text-align: center;
+}
+
+table {
+    position: absolute;
+}
