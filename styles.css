@@ -33,7 +33,7 @@ header h1 {
     font-size: 3em;
     height: calc(100% - 20px);
     font-weight: bold;
-    color: rgb(255, 243, 230);
+    color: rgb(230, 237, 255);
 }
 
 header a {
@@ -115,14 +115,27 @@ table {
     width: 60%;
     margin: 2em 20%;
     cursor: default;
+    background: rgba(20, 65, 88, 0.25);
+    border-collapse: collapse;
 }
 
 tr {
-    margin: 10px;
+    height: 25px;
+    margin: 5px;
+}
+
+tr#heading {
+    background: rgba(20, 65, 88, 0.25);
+    border-bottom: 2pt solid black;
 }
 
 th {
-    text-decoration: underline;
     font-weight: bold;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    text-align: center;
 }

@@ -13,16 +13,8 @@
     if(mysqli_connect_errno()) {
         die("Database connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")");
     }
-
-    $query  = "SELECT c.name AS genre, COUNT(fc.film_id) AS ";
-    $query .= "number_of_films FROM category c JOIN film_category fc ";
-    $query .= "ON c.category_id = fc.category_id GROUP BY fc.category_id";
-
-    $table_data = mysqli_query($connection, $query);
-    if (!$table_data) {
-        die("Database query failed!");
-    }
 ?>
+<?php require_once("includes/functions.php"); ?>
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -53,10 +45,11 @@
         <div id="content">
             <h2>RENT A DVD</h2>
             <table>
-                <tr>
-                    <th>Genres</th>
+                <tr id="heading">
+                    <th>Genre</th>
                     <th>Total number of available films</th>
                 </tr>
+                <?php print_genre_table(); ?>
             </table>
         </div>
         <div id="background">
@@ -65,3 +58,10 @@
 </body>
 
 </html>
+
+<?php
+    // close db connection
+    if(isset($connection)){
+    mysqli_close($connection);
+    }
+?>
