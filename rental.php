@@ -1,4 +1,20 @@
-<?php ?>
+<?php
+// db_connection.php
+
+    // connect to database
+    define("DB_SERVER", "localhost")      ;
+    define("DB_USER", "root")        ;
+    define("DB_PASS", "adminalizz")       ;
+    define("DB_NAME", "sakila")    ;
+
+    $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+
+    // test connection
+    if(mysqli_connect_errno()) {
+        die("Database connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")");
+    }
+?>
+<?php require_once("includes/functions.php"); ?>
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -20,22 +36,32 @@
     </header>
     <div id="navigation">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="rental.html">DVD RENTAL</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="rental.php">DVD RENTAL</a></li>
             <li><a href="return.html">DVD RETURN</a></li>
         </ul>
     </div>
     <div id="main">
-        <h2>RENT A DVD</h2>
-        <table>
-            <tr>
-            <th>Genres</th>
-                <th>Total number of available films</th>
-            </tr>
-        </table>
-        <div id="background">    
+        <div id="content">
+            <h2>RENT A DVD</h2>
+            <table>
+                <tr id="heading">
+                    <th>Genre</th>
+                    <th>Total number of available films</th>
+                </tr>
+                <?php print_genre_table(); ?>
+            </table>
+        </div>
+        <div id="background">
         </div>
     </div>
 </body>
 
 </html>
+
+<?php
+    // close db connection
+    if(isset($connection)){
+    mysqli_close($connection);
+    }
+?>

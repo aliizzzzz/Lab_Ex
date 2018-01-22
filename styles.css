@@ -33,7 +33,7 @@ header h1 {
     font-size: 3em;
     height: calc(100% - 20px);
     font-weight: bold;
-    color: rgb(255, 243, 230);
+    color: rgb(230, 237, 255);
 }
 
 header a {
@@ -52,16 +52,21 @@ header a {
 
 #navigation a {
     text-decoration: none;
-    color: rgba(229, 207, 255, 0.85);
+    color: rgba(234, 216, 255, 0.61);
+}
+
+#navigation a:hover {
+    color: rgb(229, 207, 255);
 }
 
 #navigation ul {
-    color: rgba(229, 207, 255, 0.85);
     list-style: none;
+    padding: 0 10px;
 }
 
 #navigation li {
     margin-top: 2em;
+    font-size: 20px;
 }
 
 #main {
@@ -69,6 +74,7 @@ header a {
     width: calc(100% - 240px);
     background: rgba(20, 65, 88, 0.66);
     float: left;
+    align-content: center;
 }
 
 #background {
@@ -80,12 +86,16 @@ header a {
     z-index: -1;    
 }
 
+#content {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
 
 form {
     padding: 100px;
-    width: calc(100% - 440px);
+    width: auto;
     background: rgba(0, 0, 0, 0);
-    position: absolute;
 }
 
 input {
@@ -96,11 +106,36 @@ input {
 }
 
 h2 {
-    position: absolute;
-    width: inherit;
+    width: 100%;
     text-align: center;
 }
 
 table {
     position: absolute;
+    width: 60%;
+    margin: 2em 20%;
+    cursor: default;
+    background: rgba(20, 65, 88, 0.25);
+    border-collapse: collapse;
+}
+
+tr {
+    height: 25px;
+    margin: 5px;
+}
+
+tr#heading {
+    background: rgba(20, 65, 88, 0.25);
+    border-bottom: 2pt solid black;
+}
+
+th {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    text-align: center;
 }
