@@ -113,7 +113,7 @@ h2 {
 table {
     position: absolute;
     width: 60%;
-    margin: 2em 20%;
+    margin: 2em 20% 0 20%;
     cursor: default;
     background: rgba(20, 65, 88, 0.25);
     border-collapse: collapse;
